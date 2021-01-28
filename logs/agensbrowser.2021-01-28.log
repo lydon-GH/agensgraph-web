@@ -1,0 +1,297 @@
+2021:01:28 23:29:17.637 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : Starting AgensBrowserBundleApplication on 8MJ3YWM186Z7QBR with PID 16596 (C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes started by Administrator in C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph) 
+2021:01:28 23:29:17.651 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : No active profile set, falling back to default profiles: default 
+2021:01:28 23:29:17.808 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@139982de: startup date [Thu Jan 28 23:29:17 CST 2021]; root of context hierarchy 
+2021:01:28 23:29:20.275 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'persistenceInnerConfig' of type [net.bitnine.agensbrowser.bundle.config.dao.PersistenceInnerConfig$$EnhancerBySpringCGLIB$$db981189] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:29:20.375 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'agensAsyncExecutor' of type [net.bitnine.agensbrowser.bundle.config.task.AgensAsyncExecutor$$EnhancerBySpringCGLIB$$b76e0574] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:29:20.387 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  
+2021:01:28 23:29:20.408 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  'getAsyncExecutor' 
+2021:01:28 23:29:20.408 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'getAsyncExecutor' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:29:20.999 INFO  --- [main] org.xnio : XNIO version 3.3.6.Final 
+2021:01:28 23:29:21.029 INFO  --- [main] org.xnio.nio : XNIO NIO Implementation Version 3.3.6.Final 
+2021:01:28 23:29:21.073 WARN  --- [main] io.undertow.websockets.jsr : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used 
+2021:01:28 23:29:21.074 WARN  --- [main] io.undertow.websockets.jsr : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used 
+2021:01:28 23:29:21.127 INFO  --- [main] io.undertow.servlet : Initializing Spring embedded WebApplicationContext 
+2021:01:28 23:29:21.127 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 3319 ms 
+2021:01:28 23:29:21.274 INFO  --- [main] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2021:01:28 23:29:21.283 INFO  --- [main] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2021:01:28 23:29:21.356 INFO  --- [main] o.s.j.d.DriverManagerDataSource : Loaded JDBC driver: org.h2.Driver 
+2021:01:28 23:29:21.520 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executing SQL script from class path resource [inner-h2.sql] 
+2021:01:28 23:29:21.631 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executed SQL script from class path resource [inner-h2.sql] in 110 ms. 
+2021:01:28 23:29:21.758 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:29:21.780 INFO  --- [main] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+2021:01:28 23:29:21.956 INFO  --- [main] org.hibernate.Version : HHH000412: Hibernate Core {5.0.12.Final} 
+2021:01:28 23:29:21.962 INFO  --- [main] org.hibernate.cfg.Environment : HHH000206: hibernate.properties not found 
+2021:01:28 23:29:21.965 INFO  --- [main] org.hibernate.cfg.Environment : HHH000021: Bytecode provider name : javassist 
+2021:01:28 23:29:22.054 INFO  --- [main] o.h.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+2021:01:28 23:29:22.397 INFO  --- [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect 
+2021:01:28 23:29:23.422 INFO  --- [main] o.h.tool.hbm2ddl.SchemaUpdate : HHH000228: Running hbm2ddl schema update 
+2021:01:28 23:29:23.526 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:29:23.993 WARN  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'contextClosedHandler': Unsatisfied dependency expressed through field 'agensService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'agensService' defined in file [C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes\net\bitnine\agensbrowser\bundle\persistence\inner\service\AgensService.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientStorage': Unsatisfied dependency expressed through field 'jwtTokenUtil'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021:01:28 23:29:23.994 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:29:23.996 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'getAsyncExecutor' 
+2021:01:28 23:29:24.009 INFO  --- [main] o.s.b.a.l.AutoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled. 
+2021:01:28 23:29:24.193 ERROR --- [main] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jwtTokenUtil in net.bitnine.agensbrowser.bundle.storage.ClientStorage required a bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' in your configuration.
+ 
+2021:01:28 23:30:06.790 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : Starting AgensBrowserBundleApplication on 8MJ3YWM186Z7QBR with PID 18112 (C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes started by Administrator in C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph) 
+2021:01:28 23:30:06.808 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : No active profile set, falling back to default profiles: default 
+2021:01:28 23:30:07.226 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31bcf236: startup date [Thu Jan 28 23:30:07 CST 2021]; root of context hierarchy 
+2021:01:28 23:30:18.913 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'persistenceInnerConfig' of type [net.bitnine.agensbrowser.bundle.config.dao.PersistenceInnerConfig$$EnhancerBySpringCGLIB$$9ca0697] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:30:19.569 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'agensAsyncExecutor' of type [net.bitnine.agensbrowser.bundle.config.task.AgensAsyncExecutor$$EnhancerBySpringCGLIB$$e59ffa82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:30:19.637 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  
+2021:01:28 23:30:19.842 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  'getAsyncExecutor' 
+2021:01:28 23:30:19.842 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'getAsyncExecutor' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:30:24.235 INFO  --- [main] org.xnio : XNIO version 3.3.6.Final 
+2021:01:28 23:30:24.346 INFO  --- [main] org.xnio.nio : XNIO NIO Implementation Version 3.3.6.Final 
+2021:01:28 23:30:24.498 WARN  --- [main] io.undertow.websockets.jsr : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used 
+2021:01:28 23:30:24.499 WARN  --- [main] io.undertow.websockets.jsr : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used 
+2021:01:28 23:30:24.696 INFO  --- [main] io.undertow.servlet : Initializing Spring embedded WebApplicationContext 
+2021:01:28 23:30:24.697 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 17472 ms 
+2021:01:28 23:30:26.654 INFO  --- [main] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2021:01:28 23:30:26.698 INFO  --- [main] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2021:01:28 23:30:27.078 INFO  --- [main] o.s.j.d.DriverManagerDataSource : Loaded JDBC driver: org.h2.Driver 
+2021:01:28 23:30:27.788 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executing SQL script from class path resource [inner-h2.sql] 
+2021:01:28 23:30:28.323 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executed SQL script from class path resource [inner-h2.sql] in 534 ms. 
+2021:01:28 23:30:29.359 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:30:40.859 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : Starting AgensBrowserBundleApplication on 8MJ3YWM186Z7QBR with PID 16924 (C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes started by Administrator in C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph) 
+2021:01:28 23:30:40.870 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : No active profile set, falling back to default profiles: default 
+2021:01:28 23:30:40.966 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b3ed2f0: startup date [Thu Jan 28 23:30:40 CST 2021]; root of context hierarchy 
+2021:01:28 23:30:42.790 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'persistenceInnerConfig' of type [net.bitnine.agensbrowser.bundle.config.dao.PersistenceInnerConfig$$EnhancerBySpringCGLIB$$17143377] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:30:42.877 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'agensAsyncExecutor' of type [net.bitnine.agensbrowser.bundle.config.task.AgensAsyncExecutor$$EnhancerBySpringCGLIB$$f2ea2762] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:30:42.884 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  
+2021:01:28 23:30:42.902 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  'getAsyncExecutor' 
+2021:01:28 23:30:42.903 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'getAsyncExecutor' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:30:43.449 INFO  --- [main] org.xnio : XNIO version 3.3.6.Final 
+2021:01:28 23:30:43.477 INFO  --- [main] org.xnio.nio : XNIO NIO Implementation Version 3.3.6.Final 
+2021:01:28 23:30:43.521 WARN  --- [main] io.undertow.websockets.jsr : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used 
+2021:01:28 23:30:43.521 WARN  --- [main] io.undertow.websockets.jsr : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used 
+2021:01:28 23:30:43.557 INFO  --- [main] io.undertow.servlet : Initializing Spring embedded WebApplicationContext 
+2021:01:28 23:30:43.557 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2591 ms 
+2021:01:28 23:30:43.707 INFO  --- [main] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2021:01:28 23:30:43.716 INFO  --- [main] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2021:01:28 23:30:43.779 INFO  --- [main] o.s.j.d.DriverManagerDataSource : Loaded JDBC driver: org.h2.Driver 
+2021:01:28 23:30:43.968 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executing SQL script from class path resource [inner-h2.sql] 
+2021:01:28 23:30:44.023 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executed SQL script from class path resource [inner-h2.sql] in 54 ms. 
+2021:01:28 23:30:44.136 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:30:44.150 INFO  --- [main] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+2021:01:28 23:30:44.244 INFO  --- [main] org.hibernate.Version : HHH000412: Hibernate Core {5.0.12.Final} 
+2021:01:28 23:30:44.247 INFO  --- [main] org.hibernate.cfg.Environment : HHH000206: hibernate.properties not found 
+2021:01:28 23:30:44.249 INFO  --- [main] org.hibernate.cfg.Environment : HHH000021: Bytecode provider name : javassist 
+2021:01:28 23:30:44.319 INFO  --- [main] o.h.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+2021:01:28 23:30:44.641 INFO  --- [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect 
+2021:01:28 23:30:45.551 INFO  --- [main] o.h.tool.hbm2ddl.SchemaUpdate : HHH000228: Running hbm2ddl schema update 
+2021:01:28 23:30:45.648 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:30:46.080 WARN  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'contextClosedHandler': Unsatisfied dependency expressed through field 'agensService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'agensService' defined in file [C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes\net\bitnine\agensbrowser\bundle\persistence\inner\service\AgensService.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientStorage': Unsatisfied dependency expressed through field 'jwtTokenUtil'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021:01:28 23:30:46.081 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:30:46.082 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'getAsyncExecutor' 
+2021:01:28 23:30:46.090 INFO  --- [main] o.s.b.a.l.AutoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled. 
+2021:01:28 23:30:46.284 ERROR --- [main] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jwtTokenUtil in net.bitnine.agensbrowser.bundle.storage.ClientStorage required a bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' in your configuration.
+ 
+2021:01:28 23:34:39.043 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : Starting AgensBrowserBundleApplication on 8MJ3YWM186Z7QBR with PID 17908 (C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes started by Administrator in C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph) 
+2021:01:28 23:34:39.050 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : No active profile set, falling back to default profiles: default 
+2021:01:28 23:34:39.129 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@139982de: startup date [Thu Jan 28 23:34:39 CST 2021]; root of context hierarchy 
+2021:01:28 23:34:40.858 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'persistenceInnerConfig' of type [net.bitnine.agensbrowser.bundle.config.dao.PersistenceInnerConfig$$EnhancerBySpringCGLIB$$6d4e5f6b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:34:40.923 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'agensAsyncExecutor' of type [net.bitnine.agensbrowser.bundle.config.task.AgensAsyncExecutor$$EnhancerBySpringCGLIB$$49245356] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:34:40.929 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  
+2021:01:28 23:34:40.943 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  'getAsyncExecutor' 
+2021:01:28 23:34:40.943 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'getAsyncExecutor' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:34:41.407 INFO  --- [main] org.xnio : XNIO version 3.3.6.Final 
+2021:01:28 23:34:41.429 INFO  --- [main] org.xnio.nio : XNIO NIO Implementation Version 3.3.6.Final 
+2021:01:28 23:34:41.476 WARN  --- [main] io.undertow.websockets.jsr : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used 
+2021:01:28 23:34:41.476 WARN  --- [main] io.undertow.websockets.jsr : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used 
+2021:01:28 23:34:41.516 INFO  --- [main] io.undertow.servlet : Initializing Spring embedded WebApplicationContext 
+2021:01:28 23:34:41.516 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2387 ms 
+2021:01:28 23:34:41.659 INFO  --- [main] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2021:01:28 23:34:41.666 INFO  --- [main] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2021:01:28 23:34:41.721 INFO  --- [main] o.s.j.d.DriverManagerDataSource : Loaded JDBC driver: org.h2.Driver 
+2021:01:28 23:34:41.903 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executing SQL script from class path resource [inner-h2.sql] 
+2021:01:28 23:34:41.971 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executed SQL script from class path resource [inner-h2.sql] in 67 ms. 
+2021:01:28 23:34:42.079 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:34:42.092 INFO  --- [main] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+2021:01:28 23:34:42.186 INFO  --- [main] org.hibernate.Version : HHH000412: Hibernate Core {5.0.12.Final} 
+2021:01:28 23:34:42.190 INFO  --- [main] org.hibernate.cfg.Environment : HHH000206: hibernate.properties not found 
+2021:01:28 23:34:42.190 INFO  --- [main] org.hibernate.cfg.Environment : HHH000021: Bytecode provider name : javassist 
+2021:01:28 23:34:42.257 INFO  --- [main] o.h.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+2021:01:28 23:34:42.539 INFO  --- [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect 
+2021:01:28 23:34:43.325 INFO  --- [main] o.h.tool.hbm2ddl.SchemaUpdate : HHH000228: Running hbm2ddl schema update 
+2021:01:28 23:34:43.408 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:34:43.751 WARN  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'contextClosedHandler': Unsatisfied dependency expressed through field 'agensService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'agensService' defined in file [C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes\net\bitnine\agensbrowser\bundle\persistence\inner\service\AgensService.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientStorage': Unsatisfied dependency expressed through field 'jwtTokenUtil'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021:01:28 23:34:43.752 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:34:43.752 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'getAsyncExecutor' 
+2021:01:28 23:34:43.760 INFO  --- [main] o.s.b.a.l.AutoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled. 
+2021:01:28 23:34:43.908 ERROR --- [main] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jwtTokenUtil in net.bitnine.agensbrowser.bundle.storage.ClientStorage required a bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' in your configuration.
+ 
+2021:01:28 23:35:31.867 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : Starting AgensBrowserBundleApplication on 8MJ3YWM186Z7QBR with PID 17304 (C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes started by Administrator in C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph) 
+2021:01:28 23:35:31.878 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : No active profile set, falling back to default profiles: default 
+2021:01:28 23:35:31.998 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b3ed2f0: startup date [Thu Jan 28 23:35:31 CST 2021]; root of context hierarchy 
+2021:01:28 23:35:34.013 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'persistenceInnerConfig' of type [net.bitnine.agensbrowser.bundle.config.dao.PersistenceInnerConfig$$EnhancerBySpringCGLIB$$8f3cdbbb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:35:34.108 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'agensAsyncExecutor' of type [net.bitnine.agensbrowser.bundle.config.task.AgensAsyncExecutor$$EnhancerBySpringCGLIB$$6b12cfa6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:35:34.117 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  
+2021:01:28 23:35:34.137 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  'getAsyncExecutor' 
+2021:01:28 23:35:34.137 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'getAsyncExecutor' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:35:34.809 INFO  --- [main] org.xnio : XNIO version 3.3.6.Final 
+2021:01:28 23:35:34.836 INFO  --- [main] org.xnio.nio : XNIO NIO Implementation Version 3.3.6.Final 
+2021:01:28 23:35:34.879 WARN  --- [main] io.undertow.websockets.jsr : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used 
+2021:01:28 23:35:34.879 WARN  --- [main] io.undertow.websockets.jsr : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used 
+2021:01:28 23:35:34.922 INFO  --- [main] io.undertow.servlet : Initializing Spring embedded WebApplicationContext 
+2021:01:28 23:35:34.922 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2924 ms 
+2021:01:28 23:35:35.071 INFO  --- [main] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2021:01:28 23:35:35.080 INFO  --- [main] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2021:01:28 23:35:35.150 INFO  --- [main] o.s.j.d.DriverManagerDataSource : Loaded JDBC driver: org.h2.Driver 
+2021:01:28 23:35:35.338 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executing SQL script from class path resource [inner-h2.sql] 
+2021:01:28 23:35:35.405 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executed SQL script from class path resource [inner-h2.sql] in 67 ms. 
+2021:01:28 23:35:35.534 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:35:35.553 INFO  --- [main] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+2021:01:28 23:35:35.690 INFO  --- [main] org.hibernate.Version : HHH000412: Hibernate Core {5.0.12.Final} 
+2021:01:28 23:35:35.695 INFO  --- [main] org.hibernate.cfg.Environment : HHH000206: hibernate.properties not found 
+2021:01:28 23:35:35.696 INFO  --- [main] org.hibernate.cfg.Environment : HHH000021: Bytecode provider name : javassist 
+2021:01:28 23:35:35.776 INFO  --- [main] o.h.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+2021:01:28 23:35:36.089 INFO  --- [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect 
+2021:01:28 23:35:37.041 INFO  --- [main] o.h.tool.hbm2ddl.SchemaUpdate : HHH000228: Running hbm2ddl schema update 
+2021:01:28 23:35:37.153 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:35:37.621 WARN  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'contextClosedHandler': Unsatisfied dependency expressed through field 'agensService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'agensService' defined in file [C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes\net\bitnine\agensbrowser\bundle\persistence\inner\service\AgensService.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'clientStorage': Unsatisfied dependency expressed through field 'jwtTokenUtil'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2021:01:28 23:35:37.622 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:35:37.623 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Shutting down ExecutorService 'getAsyncExecutor' 
+2021:01:28 23:35:37.631 INFO  --- [main] o.s.b.a.l.AutoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled. 
+2021:01:28 23:35:37.798 ERROR --- [main] o.s.b.d.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field jwtTokenUtil in net.bitnine.agensbrowser.bundle.storage.ClientStorage required a bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'net.bitnine.agensbrowser.bundle.util.TokenUtil' in your configuration.
+ 
+2021:01:28 23:40:24.711 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : Starting AgensBrowserBundleApplication on 8MJ3YWM186Z7QBR with PID 18192 (C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph\target\classes started by Administrator in C:\Users\Administrator\Desktop\20210117\agens_graph\AgensGraph) 
+2021:01:28 23:40:24.720 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : No active profile set, falling back to default profiles: default 
+2021:01:28 23:40:24.813 INFO  --- [main] o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b3ed2f0: startup date [Thu Jan 28 23:40:24 CST 2021]; root of context hierarchy 
+2021:01:28 23:40:26.603 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'persistenceInnerConfig' of type [net.bitnine.agensbrowser.bundle.config.dao.PersistenceInnerConfig$$EnhancerBySpringCGLIB$$ac41c6b1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:40:26.710 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'agensAsyncExecutor' of type [net.bitnine.agensbrowser.bundle.config.task.AgensAsyncExecutor$$EnhancerBySpringCGLIB$$8817ba9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:40:26.720 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  
+2021:01:28 23:40:26.741 INFO  --- [main] o.s.s.c.ThreadPoolTaskExecutor : Initializing ExecutorService  'getAsyncExecutor' 
+2021:01:28 23:40:26.741 INFO  --- [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'getAsyncExecutor' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2021:01:28 23:40:27.282 INFO  --- [main] org.xnio : XNIO version 3.3.6.Final 
+2021:01:28 23:40:27.309 INFO  --- [main] org.xnio.nio : XNIO NIO Implementation Version 3.3.6.Final 
+2021:01:28 23:40:27.350 WARN  --- [main] io.undertow.websockets.jsr : UT026009: XNIO worker was not set on WebSocketDeploymentInfo, the default worker will be used 
+2021:01:28 23:40:27.350 WARN  --- [main] io.undertow.websockets.jsr : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used 
+2021:01:28 23:40:27.388 INFO  --- [main] io.undertow.servlet : Initializing Spring embedded WebApplicationContext 
+2021:01:28 23:40:27.388 INFO  --- [main] o.s.web.context.ContextLoader : Root WebApplicationContext: initialization completed in 2575 ms 
+2021:01:28 23:40:27.533 INFO  --- [main] o.s.b.w.s.ServletRegistrationBean : Mapping servlet: 'dispatcherServlet' to [/] 
+2021:01:28 23:40:27.541 INFO  --- [main] o.s.b.w.s.FilterRegistrationBean : Mapping filter: 'characterEncodingFilter' to: [/*] 
+2021:01:28 23:40:27.596 INFO  --- [main] o.s.j.d.DriverManagerDataSource : Loaded JDBC driver: org.h2.Driver 
+2021:01:28 23:40:27.757 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executing SQL script from class path resource [inner-h2.sql] 
+2021:01:28 23:40:27.826 INFO  --- [main] o.s.j.datasource.init.ScriptUtils : Executed SQL script from class path resource [inner-h2.sql] in 69 ms. 
+2021:01:28 23:40:27.955 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:40:27.972 INFO  --- [main] o.h.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...] 
+2021:01:28 23:40:28.070 INFO  --- [main] org.hibernate.Version : HHH000412: Hibernate Core {5.0.12.Final} 
+2021:01:28 23:40:28.073 INFO  --- [main] org.hibernate.cfg.Environment : HHH000206: hibernate.properties not found 
+2021:01:28 23:40:28.074 INFO  --- [main] org.hibernate.cfg.Environment : HHH000021: Bytecode provider name : javassist 
+2021:01:28 23:40:28.140 INFO  --- [main] o.h.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.0.1.Final} 
+2021:01:28 23:40:28.427 INFO  --- [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect 
+2021:01:28 23:40:29.255 INFO  --- [main] o.h.tool.hbm2ddl.SchemaUpdate : HHH000228: Running hbm2ddl schema update 
+2021:01:28 23:40:29.348 INFO  --- [main] o.s.o.j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2021:01:28 23:40:30.253 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/auth/disconnect],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.AuthController.disconnect(javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.254 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/auth/valid],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.AuthController.connectValid(javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.255 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/auth/refresh],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.AuthController.connectRefresh(javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.255 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/auth/clients],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.AuthController.listClients(javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.256 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/auth/connect],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.AuthController.connectRequest(javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.257 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/core/query],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.web.context.request.async.WebAsyncTask<org.springframework.http.ResponseEntity<?>> net.bitnine.agensbrowser.bundle.controller.CoreController.doQuery(java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.257 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/core/meta],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.CoreController.getMeta(java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.258 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/core/command],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.web.context.request.async.WebAsyncTask<org.springframework.http.ResponseEntity<?>> net.bitnine.agensbrowser.bundle.controller.CoreController.doCommand(java.lang.String,java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.264 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/manager/logs/all],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.ManagerController.getLogsAll(javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.264 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/manager/projects],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.ManagerController.getProjects(javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.264 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/manager/projects/all],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.ManagerController.getProjectsAll(javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.265 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/manager/logs],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.ManagerController.getLogs(javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.265 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/manager/projects/save],methods=[POST],consumes=[application/json;charset=utf-8],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.ManagerController.saveProject(net.bitnine.agensbrowser.bundle.message.ProjectDto,javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.266 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/manager/logs/{id}],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.ManagerController.getLogById(java.lang.Integer,javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.267 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/manager/projects/{id}],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.ManagerController.getProjectById(java.lang.Integer,javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.267 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/manager/projects/delete/{id}],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.ManagerController.deleteProjectById(java.lang.Integer,javax.servlet.http.HttpServletRequest,org.springframework.mobile.device.Device) throws java.lang.InterruptedException 
+2021:01:28 23:40:30.269 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/test/query],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.TestController.doQuery(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.mobile.device.Device) 
+2021:01:28 23:40:30.269 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/test/meta],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.TestController.getMeta(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.mobile.device.Device) 
+2021:01:28 23:40:30.270 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/test/hello],methods=[GET],produces=[application/json]}" onto public org.springframework.http.ResponseEntity<?> net.bitnine.agensbrowser.bundle.controller.TestController.sayHello(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,org.springframework.mobile.device.Device) 
+2021:01:28 23:40:30.270 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/api/test/timeout],methods=[GET],produces=[application/json;charset=utf-8]}" onto public org.springframework.web.context.request.async.WebAsyncTask<org.springframework.http.ResponseEntity<?>> net.bitnine.agensbrowser.bundle.controller.TestController.getNowWithTimeout() 
+2021:01:28 23:40:30.271 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public java.util.Map<java.lang.String, java.lang.Object> net.bitnine.agensbrowser.bundle.exception.ErrorRestController.error(javax.servlet.http.HttpServletRequest) 
+2021:01:28 23:40:30.306 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController] 
+2021:01:28 23:40:30.328 INFO  --- [main] o.s.w.s.h.SimpleUrlHandlerMapping : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler] 
+2021:01:28 23:40:30.425 INFO  --- [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4b3ed2f0: startup date [Thu Jan 28 23:40:24 CST 2021]; root of context hierarchy 
+2021:01:28 23:40:31.279 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Registering beans for JMX exposure on startup 
+2021:01:28 23:40:31.281 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Bean with name 'outerDataSource' has been autodetected for JMX exposure 
+2021:01:28 23:40:31.287 INFO  --- [main] o.s.j.e.a.AnnotationMBeanExporter : Located MBean 'outerDataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=outerDataSource,type=HikariDataSource] 
+2021:01:28 23:40:31.296 INFO  --- [main] o.s.s.c.ThreadPoolTaskScheduler : Initializing ExecutorService  
+2021:01:28 23:40:31.352 INFO  --- [main] o.s.b.c.e.u.UndertowEmbeddedServletContainer : Undertow started on port(s) 8085 (http) 
+2021:01:28 23:40:31.358 INFO  --- [main] n.b.a.b.AgensBrowserBundleApplication : Started AgensBrowserBundleApplication in 7.617 seconds (JVM running for 14.111) 
+2021:01:28 23:40:33.653 INFO  --- [main] com.zaxxer.hikari.HikariDataSource : agensHikariCP - Starting... 
+2021:01:28 23:40:34.254 INFO  --- [main] com.zaxxer.hikari.pool.PoolBase : agensHikariCP - Driver does not support get/set network timeout for connections. (这个 org.postgresql.jdbc.PgConnection.getNetworkTimeout() 方法尚未被实作。) 
+2021:01:28 23:40:34.339 INFO  --- [main] com.zaxxer.hikari.HikariDataSource : agensHikariCP - Start completed. 
+2021:01:28 23:40:58.240 INFO  --- [XNIO-2 task-1] io.undertow.servlet : Initializing Spring FrameworkServlet 'dispatcherServlet' 
+2021:01:28 23:40:58.240 INFO  --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization started 
+2021:01:28 23:40:58.267 INFO  --- [XNIO-2 task-1] o.s.web.servlet.DispatcherServlet : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms 
+2021:01:28 23:41:00.543 INFO  --- [XNIO-2 task-41] n.b.a.b.controller.AuthController : //api/auth/connect?addr=0:0:0:0:0:0:0:1 
+2021:01:28 23:41:07.679 INFO  --- [XNIO-2 task-45] n.b.a.b.controller.AuthController : //api/auth/valid?ssid=02d7bc65-221c-4f90-a5d2-596b2de97e8c 
+2021:01:28 23:41:07.847 INFO  --- [XNIO-2 task-46] n.b.a.b.controller.CoreController : //api/core/meta 
+2021:01:28 23:41:28.717 INFO  --- [XNIO-2 task-50] n.b.a.b.controller.CoreController : /api/core/query?sql= match(n) return n&options= 
+2021:01:28 23:41:28.955 INFO  --- [Agens-async-1] o.s.b.f.xml.XmlBeanDefinitionReader : Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml] 
+2021:01:28 23:41:29.040 INFO  --- [Agens-async-1] o.s.j.support.SQLErrorCodesFactory : SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana] 
+2021:01:28 23:41:36.156 INFO  --- [XNIO-2 task-52] n.b.a.b.controller.CoreController : /api/core/query?sql= match (n) return n&options= 

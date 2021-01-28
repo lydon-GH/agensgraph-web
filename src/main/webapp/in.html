@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+
+        function firstStep(){
+            alert(1)
+        }
+
+        function secondStep(){
+            alert(1)
+        }
+
+        function threeStep(){
+            alert(3)
+
+            $.ajax({
+                type: "POST",
+                url: "/AgensGraphSqlTestController/threeStep?threeStep="+$("#threeStep").text(),
+                dataType: "json",
+                success: function(data){
+                   alert("xxxx")
+                }
+            });
+
+
+        }
+
+        function fourStep(){
+            alert(1)
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+<h1>第一步：创建外表扩展(创建过就不需要再创建了)</h1>
+    <textarea id=firstStep" rows="11" cols="151">
+
+    </textarea>
+    <button onclick="javascript:firstStep()">执行第一步</button>
+<h1>第二步：创建外表链接服务(创建过就不需要再创建了)</h1>
+    <textarea id=secondStep" rows="11" cols="151">
+
+    </textarea>
+    <button onclick="javascript:secondStep()">执行第二步</button>
+
+<h1>第三步：创建外表并加载数据、并创建节点</h1>
+
+    <textarea id=threeStep" rows="11" cols="151">
+    CREATE FOREIGN TABLE pf_organize  (
+          Id varchar(128) ,
+          Record_Id varchar(128) ,
+          Name varchar(64) ,
+          Source_Type int4 ,
+          Parent_Id varchar(128) ,
+          Description varchar(512) ,
+          Priority int4 ,
+          Sysbol varchar(128) ,
+          unit_Or_Org int4 ,
+          is_Frozen int4 ,
+          official_Level int4 ,
+          charge_Id varchar(128) ,
+          charge_Man varchar(255) ,
+          manger_Id varchar(128) ,
+          manger varchar(255) ,
+          link_Id varchar(128) ,
+          link_Man varchar(255) ,
+          link_Phone varchar(255)
+        )
+        SERVER northwind
+        OPTIONS (FORMAT 'csv', HEADER 'true', FILENAME 'C:\Users\richard\Desktop\xxx\pf_organize.csv', delimiter ',', quote '"', null '');
+    </textarea>
+
+<button onclick="javascript:threeStep()">执行第三步</button>
+
+
+<h1>第四步：生成节点之间的边</h1>
+    <textarea id=fourStep" rows="11" cols="151">
+
+    </textarea>
+
+<button onclick="javascript:fourStep()">执行第四步</button>
+
+
+
+
+
+
+
+
+</body>
+</html>
