@@ -130,6 +130,7 @@ public class CoreController {
         ClientDto client = this.clientStorage.getClient(ssid);
         if (client == null) {
             Callable<ResponseEntity<?>> callableDto = new Callable<ResponseEntity<?>>() {
+                @Override
                 public ResponseEntity<?> call() throws Exception {
                     return CoreController.this.unauthorizedMessage();
                 }
@@ -146,12 +147,14 @@ public class CoreController {
             req.setSql(sql);
             req.setOptions(options);
             Callable<ResponseEntity<?>> callableDto = new Callable<ResponseEntity<?>>() {
+                @Override
                 public ResponseEntity<?> call() throws Exception {
                     ResultDto dto = CoreController.this.queryService.doQuerySync(req);
                     return new ResponseEntity(dto.toJson(), CoreController.this.productHeaders(), HttpStatus.OK);
                 }
             };
             Callable<ResponseEntity<?>> timeoutDto = new Callable<ResponseEntity<?>>() {
+                @Override
                 public ResponseEntity<?> call() throws Exception {
                     ResultDto res = new ResultDto(req);
                     res.setState(StateType.FAIL);
@@ -203,6 +206,7 @@ public class CoreController {
             Callable callableDto;
             if (sql == null) {
                 callableDto = new Callable<ResponseEntity<?>>() {
+                    @Override
                     public ResponseEntity<?> call() throws Exception {
                         LabelDto res = new LabelDto(req);
                         res.setState(StateType.FAIL);
@@ -214,12 +218,14 @@ public class CoreController {
             } else {
                 req.setSql(sql);
                 callableDto = new Callable<ResponseEntity<?>>() {
+                    @Override
                     public ResponseEntity<?> call() throws Exception {
                         LabelDto dto = CoreController.this.queryService.doCommandSync(req);
                         return new ResponseEntity(dto.toJson(), CoreController.this.productHeaders(), HttpStatus.OK);
                     }
                 };
                 Callable<ResponseEntity<?>> timeoutDto = new Callable<ResponseEntity<?>>() {
+                    @Override
                     public ResponseEntity<?> call() throws Exception {
                         LabelDto res = new LabelDto(req);
                         res.setState(StateType.FAIL);

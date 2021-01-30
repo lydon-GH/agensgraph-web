@@ -89,6 +89,7 @@ public class TestController {
         String sql = "Timeout Test : " + this.queryTimeout + " ms is over!";
         req.setSql(sql.trim());
         Callable<ResponseEntity<?>> callableDto = new Callable<ResponseEntity<?>>() {
+            @Override
             public ResponseEntity<?> call() throws Exception {
                 ResponseDto dto = new ResponseDto();
                 dto.setState(StateType.SUCCESS);
@@ -97,6 +98,7 @@ public class TestController {
             }
         };
         Callable<ResponseEntity<?>> timeoutDto = new Callable<ResponseEntity<?>>() {
+            @Override
             public ResponseEntity<?> call() throws Exception {
                 ResponseDto res = new ResponseDto();
                 res.setState(StateType.FAIL);
